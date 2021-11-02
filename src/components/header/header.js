@@ -8,7 +8,7 @@ import SvgComponentLogo from "../logo";
 
 function Header({ element }) {
   const [open, setOpen] = useState(false);
-  const [windowWidth, setWindowWidth] = useState(0);
+  const [windowWidth, setWindowWidth] = useState();
 
   useEffect(() => {
     function handleResize() {
