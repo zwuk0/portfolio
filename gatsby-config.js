@@ -2,8 +2,12 @@ require("dotenv").config({ path: `.env.${process.env.NODE_ENV}` });
 
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
-    title: "portfolio",
+    siteUrl: "https://anupamtirkey.netlify.app/",
+    title: "anupamtirkey",
+    description:
+      " Hello, My name is Anupam Tirkey. I'm a Frontend Developer based in Bhilai, CG",
+    author: "@anupamtirkey",
+    language: "en_US ",
   },
   plugins: [
     {
@@ -18,7 +22,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/images/icon.png",
+        icon: "src/images/icon3.svg",
       },
     },
     "gatsby-plugin-mdx",
