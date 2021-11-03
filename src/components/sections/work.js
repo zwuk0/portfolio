@@ -36,7 +36,6 @@ function Work() {
     }
   `);
   const queryWork = data.allPrismicProjects.edges;
-  console.log(queryWork);
   return (
     <WorkContainer id="work">
       <WorkContent>
