@@ -6,7 +6,7 @@ export const AboutContainer = styled.section`
 export const AboutContent = styled.div`
   padding-top: 6em;
   h1 {
-    margin-left: 1em;
+    /* margin-left: 1em; */
     color: ${(props) => props.theme.color.text1};
   }
 `;
@@ -15,24 +15,23 @@ export const AboutProfile = styled.div`
   display: grid;
   grid-gap: 2em;
   grid-template-columns: 1fr 2fr;
+  @media (max-width: ${(props) => props.theme.breakpoints.md}) {
+    grid-template-columns: 1fr;
+  }
 `;
 export const ProfilePhoto = styled.div`
   img {
     width: 100%;
+    @media (max-width: ${(props) => props.theme.breakpoints.md}) {
+      width: 50%;
+    }
   }
 `;
 export const ProfileBio = styled.div`
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-size: 1.3em;
-  color: ${(props) => props.theme.color.text2};
-  padding: 0 10%;
-  h4 {
-    margin-top: 0.8em;
-    margin-bottom: 0.2em;
-
-    color: ${(props) => props.theme.color.color2};
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 80ch;
   button {
     margin-top: 3em;
     background-color: transparent;
@@ -52,4 +51,27 @@ export const ProfileBio = styled.div`
       margin-right: 0.3em;
     }
   }
+`;
+export const BioTitle = styled.h2`
+  color: ${(props) => props.theme.color.color2};
+  font-size: 2em;
+  @media (max-width: ${(props) => props.theme.breakpoints.md}) {
+    font-size: 1.8em;
+  }
+`;
+export const BioText = styled.p`
+  font-family: "Poppins" sans-serif;
+  color: ${(props) => props.theme.color.text2};
+  font-size: 1.3125rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.md}) {
+    font-size: 1.2rem;
+  }
+`;
+export const AboutSkills = styled.div`
+  margin-top: 5em;
+  max-width: 80ch;
+`;
+export const AboutTools = styled.div`
+  margin-top: 5em;
+  max-width: 80ch;
 `;

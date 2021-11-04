@@ -8,7 +8,7 @@ import SvgComponentLogo from "../logo";
 
 function Header({ element }) {
   const [open, setOpen] = useState(false);
-  const [windowWidth, setWindowWidth] = useState();
+  const [windowWidth, setWindowWidth] = useState(0);
 
   useEffect(() => {
     function handleResize() {
@@ -102,6 +102,7 @@ const StyledHeader = styled.header`
   position: relative;
   background-color: ${(props) => props.theme.color.background};
   padding-top: 1em;
+  padding-bottom: 1em;
 
   @media (min-width: 800px) {
     padding-top: 1em;
@@ -114,7 +115,7 @@ const StyledHeader = styled.header`
 const StyledNavWrapper = styled.div`
   /* margin-top: 0.8em; */
 
-  width: 90%;
+  width: 95%;
   max-width: 80em;
   position: fixed;
   @media (min-width: 800px) {

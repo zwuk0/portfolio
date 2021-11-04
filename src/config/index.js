@@ -54,3 +54,10 @@ export const fonts = {
   primary:
     " -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
 };
+
+export const breakpoints = {
+  mx: "80em",
+  lg: "60em",
+  md: "45em",
+  sm: "20em",
+};

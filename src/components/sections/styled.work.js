@@ -19,14 +19,14 @@ export const WorkCardsContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 1.5em;
-  @media (max-width: 800px) {
+  @media (max-width: ${(props) => props.theme.breakpoints.md}) {
     grid-template-columns: 1fr;
   }
 
   /* grid-template-columns: 1fr 1fr 1fr; */
 `;
 export const WorkCard = styled.div`
-  box-shadow: 2px 2px 3px rgba(1, 0, 0, 0.5);
+  /* box-shadow: 2px 2px 3px rgba(1, 0, 0, 0.5); */
   height: fit-content;
   border: 1px solid ${(props) => props.theme.color.color2};
   color: ${(props) => props.theme.color.text2};

@@ -1,5 +1,5 @@
 import React from "react";
-// import styled from "styled-components";
+import styled from "styled-components";
 import { graphql, useStaticQuery } from "gatsby";
 
 import {
@@ -8,6 +8,9 @@ import {
   HeroIntro,
   HeroSocial,
 } from "./styled.hero";
+import SvgGithub from "../icons/github";
+import SvgLinkidIn from "../icons/LinkidIn";
+import SvgGmail from "../icons/Gmail";
 
 function Hero() {
   const queryHero = useStaticQuery(graphql`
@@ -38,9 +41,9 @@ function Hero() {
         </HeroIntro>
         <button>Let's Work Together</button>
         <HeroSocial>
-          <span>Github</span>
-          <span>LinkedIn</span>
-          <span>Email</span>
+          <SvgGithub className="fo-icon" />
+          <SvgLinkidIn className="fo-icon" />
+          <SvgGmail className="fo-icon" />
         </HeroSocial>
       </HeroContent>
     </HeroContainer>

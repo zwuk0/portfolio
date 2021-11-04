@@ -1,7 +1,8 @@
-import { colors, fonts } from "../config";
+import { colors, fonts, breakpoints } from "../config";
 
 export const sharedPrefrence = {
   fonts: fonts,
+  breakpoints: breakpoints,
 };
 
 export const lightTheme = {

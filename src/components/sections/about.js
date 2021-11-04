@@ -6,54 +6,64 @@ import {
   AboutProfile,
   ProfileBio,
   ProfilePhoto,
+  BioTitle,
+  BioText,
+  AboutSkills,
+  AboutTools,
 } from "./styled-about";
 
 function About() {
-  const data = useStaticQuery(graphql`
+  const query = useStaticQuery(graphql`
     {
       prismicAbout {
         data {
-          about_me {
-            text
-          }
-          dev_tools {
-            tools {
-              text
-            }
-          }
           profile_photo {
             url
           }
-          skill_list {
-            skill {
-              text
-            }
+          title1 {
+            text
+          }
+          text1 {
+            text
+          }
+          title2 {
+            text
+          }
+          text2 {
+            text
+          }
+          title3 {
+            text
+          }
+          text3 {
+            text
           }
         }
       }
     }
   `);
-  const qdata = data.prismicAbout.data;
+  const data = query.prismicAbout.data;
   return (
     <AboutContainer id="about">
       <AboutContent>
         <h1>About Me</h1>
         <AboutProfile>
           <ProfilePhoto>
-            <img src={qdata.profile_photo.url} alt="imag" />
+            <img src={data.profile_photo.url} alt="imag" />
           </ProfilePhoto>
           <ProfileBio>
-            <p>{qdata.about_me.text}</p>
-            <h4>my skillset -</h4>
-            {qdata.skill_list.map((a) => (
-              <p>{a.skill.text}</p>
-            ))}
-            <h4>dev tools -</h4>
-            {qdata.dev_tools.map((a) => (
-              <p>{a.tools.text}</p>
-            ))}
+            <BioTitle>{data.title1.text}</BioTitle>
+            <BioText>{data.text1.text}</BioText>
           </ProfileBio>
         </AboutProfile>
+        <AboutSkills>
+          <BioTitle>{data.title2.text}</BioTitle>
+          <BioText>{data.text2.text}</BioText>
+        </AboutSkills>
+        <AboutTools>
+          <BioTitle>{data.title3.text}</BioTitle>
+          <BioText>{data.text3.text}</BioText>
+        </AboutTools>
       </AboutContent>
     </AboutContainer>
   );

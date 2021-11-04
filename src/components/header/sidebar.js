@@ -38,7 +38,7 @@ const StyledSideBar = styled.div`
   top: 0;
   right: 0;
   height: 100%;
-  width: 55%;
+  width: 60%;
   background-color: ${(props) => props.theme.color.background};
   transition: all 0.3s ease-in-out;
   transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
@@ -56,26 +56,29 @@ const SidebarNav = styled.div`
   padding: 2rem;
   text-align: center;
   align-items: center;
-  justify-content: center;
+  margin-top: 5em;
+  /* justify-content: center; */
 `;
 const StyledLinks = styled.a`
   text-decoration: none;
   color: ${(props) => props.theme.color.text1};
 
-  font-weight: bold;
+  font-weight: normal;
+  font-size: 1.5rem;
   &:not(:first-child) {
-    margin-top: 1em;
+    margin-top: 2.5em;
   }
 `;
 const StyledBtn = styled.a`
-  margin-top: 1em;
-  border: 0.2em solid ${(props) => props.theme.color.text1};
-  padding: 0.5em;
+  margin-top: 2.3em;
+  /* border: 0.2em solid ${(props) => props.theme.color.text1}; */
+  /* padding: 0.5em; */
   width: 7em;
+  font-size: 1.5rem;
   text-align: center;
   text-decoration: none;
   color: ${(props) => props.theme.color.text1};
-  font-weight: bold;
+  font-weight: normal;
   border-radius: 1em;
 `;
 const BackDrop = styled.div`

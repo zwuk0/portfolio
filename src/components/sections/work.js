@@ -5,6 +5,7 @@ import {
   WorkContent,
   WorkCard,
   WorkCardsContainer,
+  WcImage,
 } from "./styled.work";
 
 function Work() {
@@ -44,7 +45,7 @@ function Work() {
           {queryWork.map((a) => (
             <WorkCard>
               <img src={a.node.data.project_image.url} alt="img" />
-              <div class="wc-text">
+              <div className="wc-text">
                 <h3>{a.node.data.project_title.text}</h3>
                 <span>{a.node.data.tags.text}</span>
                 <p>{a.node.data.description.text}</p>
