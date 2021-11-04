@@ -60,7 +60,7 @@ export const ProfileBio = styled.div`
 export const BioTitle = styled.h2`
   color: ${(props) => props.theme.color.color2};
   font-size: 2em;
-  line-height: 2;
+  line-height: 1.1;
   @media (max-width: ${(props) => props.theme.breakpoints.md}) {
     font-size: 1.8em;
   }

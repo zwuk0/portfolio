@@ -41,9 +41,27 @@ function Hero() {
         </HeroIntro>
         <StyledLink to="/contact">Let's Work Together</StyledLink>
         <HeroSocial>
-          <SvgGithub className="fo-icon" />
-          <SvgLinkidIn className="fo-icon" />
-          <SvgGmail className="fo-icon" />
+          <a
+            href="https://github.com/zwuk0"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <SvgGithub className="fo-icon" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/anupam-tirkey-7223b5209/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <SvgLinkidIn className="fo-icon" />
+          </a>
+          <a
+            href="mailto: anupam.deep01@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <SvgGmail className="fo-icon" />
+          </a>
         </HeroSocial>
       </HeroContent>
     </HeroContainer>

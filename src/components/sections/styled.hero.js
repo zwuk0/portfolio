@@ -59,15 +59,18 @@ export const HeroSocial = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
-  .fo-icon {
-    fill: ${(props) => props.theme.color.color2};
+  a {
     cursor: pointer;
-    &:hover {
+
+    &:hover .fo-icon {
       fill: ${(props) => props.theme.color.color1};
     }
     &:not(:first-child) {
       margin-left: 2.5em;
     }
+  }
+  .fo-icon {
+    fill: ${(props) => props.theme.color.color2};
   }
   /* justify-content: center; */
   color: ${(props) => props.theme.color.color2};
