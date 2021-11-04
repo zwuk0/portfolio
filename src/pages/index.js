@@ -13,7 +13,7 @@ const IndexPage = () => {
       <Seo />
       <Hero />
       <Work />
-      <About />;
+      <About />
     </Layout>
   );
 };

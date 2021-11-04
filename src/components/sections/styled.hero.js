@@ -1,3 +1,4 @@
+import { Link } from "gatsby";
 import styled from "styled-components";
 
 export const HeroContainer = styled.div`
@@ -12,20 +13,21 @@ export const HeroContent = styled.div`
   @media (max-width: ${(props) => props.theme.breakpoints.lg}) {
     padding: 0;
   }
-  button {
-    background-color: ${(props) => props.theme.color.color2};
-    color: #ffffff;
-    border: none;
-    padding: 0.5em;
-    font-size: 1.3rem;
-    font-weight: bold;
-    width: 100%;
-    max-width: 13em;
-    margin-top: 2em;
-    cursor: pointer;
-    &:hover {
-      background-color: ${(props) => props.theme.color.color1};
-    }
+`;
+export const StyledLink = styled(Link)`
+  background-color: ${(props) => props.theme.color.color2};
+  color: #ffffff;
+  padding: 0.5em;
+  font-size: 1.3rem;
+  font-weight: bold;
+  width: 100%;
+  text-decoration: none;
+  text-align: center;
+  max-width: 13em;
+  margin-top: 2em;
+  cursor: pointer;
+  &:hover {
+    background-color: ${(props) => props.theme.color.color1};
   }
 `;
 export const HeroIntro = styled.div`

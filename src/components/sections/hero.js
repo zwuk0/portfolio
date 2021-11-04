@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 import { graphql, useStaticQuery } from "gatsby";
 
 import {
@@ -7,6 +6,7 @@ import {
   HeroContent,
   HeroIntro,
   HeroSocial,
+  StyledLink,
 } from "./styled.hero";
 import SvgGithub from "../icons/github";
 import SvgLinkidIn from "../icons/LinkidIn";
@@ -39,7 +39,7 @@ function Hero() {
             <p>{a.text}</p>
           ))}
         </HeroIntro>
-        <button>Let's Work Together</button>
+        <StyledLink to="/contact">Let's Work Together</StyledLink>
         <HeroSocial>
           <SvgGithub className="fo-icon" />
           <SvgLinkidIn className="fo-icon" />

@@ -5,7 +5,6 @@ import {
   WorkContent,
   WorkCard,
   WorkCardsContainer,
-  WcImage,
 } from "./styled.work";
 
 function Work() {

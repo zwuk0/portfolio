@@ -1,8 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import SvgGithub from "./icons/github";
-import SvgGmail from "./icons/Gmail";
-import SvgLinkidIn from "./icons/LinkidIn";
+import { Link } from "gatsby";
 
 const FooterContainer = styled.div`
   width: 100%;
@@ -37,22 +35,19 @@ const FooterContent = styled.div`
     margin-right: 0.3em;
   }
 `;
-const Cta = styled.a`
-  cursor: pointer;
-  padding-bottom: 0.5em;
+const StyledLink = styled(Link)`
+  text-decoration: none;
   border-bottom: 1px solid ${(props) => props.theme.color.color2};
+  font-size: 1.5em;
+  font-weight: 700;
+  color: ${(props) => props.theme.color.text1};
+  padding-bottom: 0.5em;
 
-  p {
-    &:hover {
-      color: ${(props) => props.theme.color.color2};
-    }
-    color: ${(props) => props.theme.color.text1};
-    font-size: 1.5em;
-    font-weight: 700;
-    @media (max-width: ${(props) => props.theme.breakpoints.lg}) {
-      font-size: 1.4em;
-      /* color: ${(props) => props.theme.color.color2}; */
-    }
+  &:hover {
+    color: ${(props) => props.theme.color.color2};
+  }
+  @media (max-width: ${(props) => props.theme.breakpoints.lg}) {
+    font-size: 1.4em;
   }
 `;
 
@@ -75,10 +70,11 @@ function Footer() {
           <SvgLinkidIn class="fo-icon" />
           <SvgGmail class="fo-icon" />
         </FooterSocial> */}
+
         <p>2021 | designed and developed by me.</p>
-        <Cta>
-          <p> Got a project? Lets work together?</p>
-        </Cta>
+        <StyledLink to="/contact">
+          Got a project? Lets work together?
+        </StyledLink>
       </FooterContent>
     </FooterContainer>
   );

@@ -49,7 +49,7 @@ function About() {
         <h1>About Me</h1>
         <AboutProfile>
           <ProfilePhoto>
-            <img src={data.profile_photo.url} alt="imag" />
+            {/* <img src={data.profile_photo.url} alt="imag" /> */}
           </ProfilePhoto>
           <ProfileBio>
             <BioTitle>{data.title1.text}</BioTitle>

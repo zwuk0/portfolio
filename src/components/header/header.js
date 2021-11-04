@@ -9,15 +9,15 @@ import SvgComponentLogo from "../logo";
 function Header({ element }) {
   const [open, setOpen] = useState(false);
   const [windowWidth, setWindowWidth] = useState(0);
-
   useEffect(() => {
-    function handleResize() {
+    const isSSR = typeof window === "undefined";
+    let handleWindowSizeChange;
+    if (!isSSR) {
+      handleWindowSizeChange = () => setWindowWidth(window.innerWidth);
       setWindowWidth(window.innerWidth);
     }
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
+    window.addEventListener("resize", handleWindowSizeChange);
+    return () => window.removeEventListener("resize", handleWindowSizeChange);
   }, [windowWidth]);
 
   let navigation;
