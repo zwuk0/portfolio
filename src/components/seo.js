@@ -28,6 +28,10 @@ const Seo = () => {
       <meta property="og:url" content={site.siteUrl} />
       <meta property="og:author" content={site.author} />
       <meta property="og:locale" content={site.language} />
+      <meta
+        name="google-site-verification"
+        content="7EIoDigNL2luQqBevzl-3-h_jiMY06hdd0bjMDMIYu0"
+      />
     </Helmet>
   );
 };
