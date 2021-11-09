@@ -21,7 +21,7 @@ const Seo = () => {
   const site = data.site.siteMetadata;
   return (
     <Helmet>
-      <title>anupamtirkey</title>
+      <title>Anupam Tirkey</title>
       <meta property="og:title" content={site.title} />
       <meta property="og:description" content={site.description} />
       <meta property="og:image" content={Icon} />

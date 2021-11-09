@@ -2,10 +2,10 @@ require("dotenv").config({ path: `.env.${process.env.NODE_ENV}` });
 
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://anupamtirkey.netlify.app/",
-    title: "anupamtirkey",
+    siteUrl: "https://anupamtirkey.me",
+    title: "Anupam Tirkey",
     description:
-      " Hello, My name is Anupam Tirkey. I'm a Frontend Developer based in Bhilai, CG",
+      "Front-End Developer based in bhilai, Hi there, my name is Anupam Tirkey, I love codeing websites",
     author: "@anupamtirkey",
     language: "en_US ",
   },
