@@ -18,7 +18,8 @@ export const WorkCardsContainer = styled.div`
   margin-top: 2em;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 1.5em;
+  grid-gap: 4em;
+
   @media (max-width: ${(props) => props.theme.breakpoints.md}) {
     grid-template-columns: 1fr;
   }
@@ -27,15 +28,24 @@ export const WorkCardsContainer = styled.div`
 `;
 export const WorkCard = styled.div`
   /* box-shadow: 2px 2px 3px rgba(1, 0, 0, 0.5); */
-  height: fit-content;
-  border: 1px solid ${(props) => props.theme.color.color2};
+  height: 15em;
+  border: 2px solid ${(props) => props.theme.color.color2};
   color: ${(props) => props.theme.color.text2};
+  border-radius: 0.5em;
+  /* &:nth-child(even) {
+    margin-top: 4em;
+    width: 20em;
+  } */
+
   img {
     width: 100%;
     max-width: 660px;
+    border-radius: 0.5em 0.5em 0 0;
   }
   .wc-text {
-    padding: 1em 2em 1.5em 2em;
+    padding: 2em 2em 1.5em 2em;
+    position: relative;
+    height: 90%;
     a {
       /* margin-top: 2em; */
       text-decoration: none;
@@ -59,6 +69,18 @@ export const WorkCard = styled.div`
       margin-bottom: 0.5em;
       font-family: "Poppins", sans-serif;
       font-weight: 400;
+    }
+    div {
+      /* background-color: wheat; */
+      position: absolute;
+      bottom: 0;
+    }
+    .material-icons-outlined {
+      font-family: "Material Icons";
+      font-size: 2em;
+      &:hover {
+        color: ${(props) => props.theme.color.color2};
+      }
     }
   }
 `;

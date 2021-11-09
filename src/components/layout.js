@@ -23,8 +23,8 @@ const Layout = ({ children }) => {
           type="checkbox"
         />
         <CheckBoxLabel htmlFor="checkbox">
-          <SvgComponentMoon width={30} />
-          <SvgComponentSun width={30} />
+          <span class="material-icons-round">dark_mode</span>
+          <span class="material-icons-round">light_mode</span>
         </CheckBoxLabel>
       </CheckBoxWrapper>
     </>
@@ -63,6 +63,9 @@ const CheckBoxWrapper = styled.div`
 const CheckBoxLabel = styled.label`
   position: absolute;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.2em;
   top: 0;
   left: 0;
   width: 3.1em;
@@ -75,13 +78,18 @@ const CheckBoxLabel = styled.label`
     position: absolute;
     display: block;
     border-radius: 50%;
-    width: 22px;
-    height: 22px;
-    margin: 1.5px;
+    width: 25px;
+    height: 25px;
+    /* margin: 1.5px; */
     background: #ffffff;
     box-shadow: 1px 3px 3px 1px rgba(0, 0, 0, 0.2);
     transition: 0.2s;
     transform: translateX(1.5em);
+  }
+  .material-icons-round {
+    font-family: "Material Icons";
+    font-size: 1.2em;
+    color: yellow;
   }
 `;
 const CheckBox = styled.input`
@@ -92,15 +100,20 @@ const CheckBox = styled.input`
   height: 26px;
 
   &:checked + ${CheckBoxLabel} {
-    background: #4fbe79;
+    /* background: #4ff; */
+
     &::after {
+      position: absolute;
+
       content: "";
       display: block;
       border-radius: 50%;
-      width: 22px;
-      height: 22px;
+      width: 25px;
+      height: 25px;
+      box-shadow: 1px 3px 3px 1px rgba(0, 0, 0, 0.2);
+
       transition: 0.2s;
-      transform: translateX(0);
+      transform: translateX(-0.25em);
     }
   }
 `;

@@ -43,12 +43,19 @@ function Work() {
         <WorkCardsContainer>
           {queryWork.map((a) => (
             <WorkCard>
-              <img src={a.node.data.project_image.url} alt="img" />
               <div className="wc-text">
                 <h3>{a.node.data.project_title.text}</h3>
                 <span>{a.node.data.tags.text}</span>
                 <p>{a.node.data.description.text}</p>
-                <a href={a.node.data.live_site.url}>Live View</a>
+                <div>
+                  <a
+                    href={a.node.data.live_site.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span className="material-icons-outlined">open_in_new</span>
+                  </a>
+                </div>
               </div>
             </WorkCard>
           ))}

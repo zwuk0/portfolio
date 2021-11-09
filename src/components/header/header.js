@@ -114,7 +114,7 @@ const StyledHeader = styled.header`
 `;
 const StyledNavWrapper = styled.div`
   /* margin-top: 0.8em; */
-
+  z-index: 8;
   width: 95%;
   max-width: 80em;
   position: fixed;
