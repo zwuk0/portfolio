@@ -18,7 +18,7 @@ export const navItems = {
     {
       name: "Resume",
       fileName:
-        "https://drive.google.com/file/d/1nkDt16qC4dqROY1gng9IVxPnIJf7ZhdT/view?usp=sharing",
+        "https://drive.google.com/file/d/1j1nt9PbyXqEQfY85xVQd4xlwfD8RtatB/view?usp=sharing",
     },
   ],
 };
